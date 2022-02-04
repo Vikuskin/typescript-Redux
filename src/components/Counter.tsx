@@ -3,8 +3,8 @@ import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypeSelector";
 
 export const Counter: React.FC = () => {    
-    const counter = useTypedSelector(state => state.counter.counter);
-    const theme = useTypedSelector(state => state.theme.value);
+    const counter: number = useTypedSelector(state => state.counter.counter);
+    const theme: string = useTypedSelector(state => state.theme.value);
     const {increment, decrement, themeChangeDark, themeChangeLight} = useActions();
 
     return (

@@ -1,4 +1,4 @@
-export interface TodoState {
+export type TodoState = {
     tasks: any[]
 }
 
@@ -9,12 +9,13 @@ export enum TodoActionTypes {
 
 export interface TodoAddTaskAction {
     type: TodoActionTypes.ADD_TASK;
-    payload: string
+    id: number,
+    task: string
 }
 
 export interface TodoRemoveTaskAction {
     type: TodoActionTypes.REMOVE_TASK;
-    payload: string
+    id: number
 }
 
 export type TodoAction = TodoAddTaskAction | TodoRemoveTaskAction
